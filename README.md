@@ -1,11 +1,12 @@
 # Cpp-Code
-A selection of Cpp files and associated text files created as part of the course Numerical Methods for Incompresible Fluid Dynamics (Scientific Computing MPhil, Cambridge University).
+A selection of Cpp files and associated text files created as part of the course Numerical Methods for Incompresible Fluid Dynamics (Scientific Computing MPhil, Cambridge University). 
+The objective was to create a set of files and classes capable of solving the convection-diffusion equation for a passive scalar using the finite volume method.
+
+A discrete mesh object (Mesh.cpp) is defined using a supplied list of points, faces, finite volume cells, and boundary patches. Points, faces, cells, and boundary patches of the mesh are stored as objects in their own right.
 Given the Mesh class, the sparse matrix addressing class (SparseAddress.cpp) constructs an object which stores the matrix structure of a mesh object for discretisation of a differential equation over the associated domain.
 This is done assuming a compressed row format. 
-The SparseMat.cpp class creates a sparse matrix object derived from a SparseAddress object. When populated with suitable coefficients, the SparseMat class can determine various attributes of the sparse matrix, such as symmetry,
-positive definiteness, and determinants of submatrices. 
-The Sparse Linear System class (SLS.cpp) creates a sparse linear system derived from a sparse matrix object, A. Furthermore, it stores vectors x and b appearing in the linear system Ax = b. The SLS.cpp-file contains various
-functions used to actually discretise the terms of the convection-diffusion equation and to thereby populate the entries of the sparse matrix object A and the vector b.
+The SparseMat.cpp class creates a sparse matrix object derived from a SparseAddress object. When populated with suitable coefficients, the SparseMat class can determine various attributes of the sparse matrix, such as symmetry, positive definiteness, and determinants of submatrices. 
+The Sparse Linear System class (SLS.cpp) creates a sparse linear system object derived from a sparse matrix object, A. Furthermore, it stores vectors x and b appearing in the linear system Ax = b. The SLS.cpp-file contains various functions used to actually discretise the terms of the convection-diffusion equation and to thereby populate the entries of the sparse matrix object A and the vector b.
 The Gauss-Seidel Smoother class (GSSmooth.cpp) defines an object derived from a sparse linear system object. A GSSmooth object has a function "smooth" which runs through the provided number of Gauss-Seidel 
 sweeps in order to solve the system Ax = b as defined in the sparse linear system object from which it was derived. 
 Finally, the Gauss-Seidel Solver class (GSSolver.cpp) defines objects derived from a GSSmooth object. A GSSolver object has a function "Solve", which will call on the "smooth" function from its GSSmooth object until
