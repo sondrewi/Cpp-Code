@@ -1,5 +1,5 @@
 # Cpp-Code
-A selection of Cpp files and associated text files created as part of the course Numerical Methods for Incompresible Fluid Dynamics on Scientific Computing MPhil (Cambridge)
+A selection of Cpp files and associated text files created as part of the course Numerical Methods for Incompresible Fluid Dynamics (Scientific Computing MPhil, Cambridge University).
 Given the Mesh class, the sparse matrix addressing class (SparseAddress.cpp) constructs an object which stores the matrix structure of a mesh object for discretisation of a differential equation over the associated domain.
 This is done assuming a compressed row format. 
 The SparseMat.cpp class creates a sparse matrix object derived from a SparseAddress object. When populated with suitable coefficients, the SparseMat class can determine various attributes of the sparse matrix, such as symmetry,
