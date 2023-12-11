@@ -14,10 +14,10 @@ cell in the z-direction across the entire mesh*/
 #include <Eigen/Dense>
 #include "GSSolver.H"
 
-std::string points_file = "/Users/sondrew/Documents/University/Cambridge/Courses/IFD/Practical3/points_m.dat";
-std::string faces_file = "/Users/sondrew/Documents/University/Cambridge/Courses/IFD/Practical3/faces_m.dat";
-std::string cells_file = "/Users/sondrew/Documents/University/Cambridge/Courses/IFD/Practical3/cells_m.dat";
-std::string boundary_file = "/Users/sondrew/Documents/University/Cambridge/Courses/IFD/Practical3/boundary_m.dat";
+std::string points_file = "/Users/sondrew/Documents/University/Cambridge/Courses/IFD/mesh_files/points_m.dat";
+std::string faces_file = "/Users/sondrew/Documents/University/Cambridge/Courses/IFD/mesh_files/faces_m.dat";
+std::string cells_file = "/Users/sondrew/Documents/University/Cambridge/Courses/IFD/mesh_files/cells_m.dat";
+std::string boundary_file = "/Users/sondrew/Documents/University/Cambridge/Courses/IFD/mesh_files/boundary_m.dat";
 
 int main(void) {
     //Initiate mesh, sparse addressing object, sparse matrix object and sparse linear system
