@@ -2,7 +2,7 @@
 A selection of Cpp files and associated text files created as part of the course Numerical Methods for Incompresible Fluid Dynamics (Scientific Computing MPhil, Cambridge University). 
 The objective was to create a set of files and classes capable of solving the convection-diffusion equation for a passive scalar using the finite volume method.
 
-A discrete mesh object (Mesh.cpp) is defined using a supplied list of points, faces, finite volume cells, and boundary patches. Points, faces, cells, and boundary patches of the mesh are stored as objects in their own right.
+A discrete 3D mesh object (Mesh.cpp) is defined using a supplied list of points, faces, finite volume cells, and boundary patches. Points, faces, cells, and boundary patches of the mesh are stored as objects in their own right.
 Given the Mesh class, the sparse matrix addressing class (SparseAddress.cpp) constructs an object which stores the matrix structure of a mesh object for discretisation of a differential equation over the associated domain.
 This is done assuming a compressed row format. 
 The SparseMat.cpp class creates a sparse matrix object derived from a SparseAddress object. When populated with suitable coefficients, the SparseMat class can determine various attributes of the sparse matrix, such as symmetry, positive definiteness, and determinants of submatrices. 
